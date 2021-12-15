@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Component
 
-import {getBoard} from "./../api/boards/controller";
+import {getBoard} from "../api/boards/controller";
 
 //Routes
 
