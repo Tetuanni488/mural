@@ -1,15 +1,16 @@
-import mongoose from 'mongoose';
+import mongoose, {ConnectOptions} from 'mongoose';
 import config from './config/config';
 
-const options: object= {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+(async () =>{
+    
+    const mongooseOptioms: ConnectOptions = {
+        user: config.DATABASE.USER,
+        pass: config.DATABASE.PASSWD
+    }
 
-};
-
-mongoose.connect(config.DATABASE.URI, options)
-
-mongoose.connection
+    await mongoose.connect(`mongodb://${config.DATABASE.HOST}/${config.DATABASE.NAME}`)
+ 
+    mongoose.connection
     .once('open', () =>{
         console.log('Conection establecida');
     })
@@ -17,3 +18,4 @@ mongoose.connection
         console.log(err);
         process.exit(0);
     });
+})()

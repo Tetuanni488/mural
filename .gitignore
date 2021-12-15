@@ -1,4 +1,3 @@
-/node_modules
-/src/public/upload/media/images/*
-/src/public/upload/media/videos/*
-/src/public/upload/temp/*
+node_modules
+build
+.env
