@@ -1,0 +1,36 @@
+::root{
+    --red-button: #ff1100;
+
+    --font-size-medium:18px;
+}
+
+.topnav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 0 5px 5px #80808065;
+
+    &__section{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 1em;
+        width: 100%;
+    }
+    &__button{
+        min-width: 50px;
+        padding: .5em;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        background-color: #ff1100;
+        border-radius: 2em;
+        transition: all 0.3s;
+
+        &:hover{
+            background-color: #e91000;
+        }
+    }
+}
