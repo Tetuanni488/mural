@@ -6,8 +6,10 @@
 
 .topnav{
     display: flex;
+    flex: 1;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     box-shadow: 0 0 5px 5px #80808065;
 
@@ -17,6 +19,13 @@
         gap: 10px;
         padding: 1em;
         width: 100%;
+
+        &--jc-end{
+            justify-content: end;
+        }
+        &--jc-center{
+            justify-content: center;
+        }
     }
     &__button{
         min-width: 50px;
@@ -28,9 +37,59 @@
         background-color: #ff1100;
         border-radius: 2em;
         transition: all 0.3s;
+        cursor: pointer;
 
         &:hover{
             background-color: #e91000;
         }
+
+        &--variant-2{
+            color: #000;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        &--variant-2:hover{
+            background-color: transparent;
+            color: #808080;
+        }
+    }
+
+    .user{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+
+        &__name{
+            width: 200px;
+        }
+
+        &__avatar{
+            width: auto;
+            .image{
+                width: 50px;
+                clip-path: circle(50%);
+            }
+        }
+    }
+}
+
+.zoom{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: .5em;
+    font-weight: bold;
+    font-size: 20px;
+
+    &__interactive{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+    &__icon{
+        font-size: 25px;
     }
 }
