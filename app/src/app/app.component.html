@@ -1,23 +1,42 @@
-<div class="topnav">
+<div class="topnav topnav--dark-mode">
   <div class="topnav__section">
-    <div class="topnav__button">List</div>
-    <div class="topnav__button">Board</div>
-    <div class="topnav__button">Note</div>
+    
+    <button class="topnav__button"mat-button color="primary">List</button>
+
+    <button class="topnav__button"mat-button [matMenuTriggerFor]="menuNavBoard" color="primary">Board</button>
+    <mat-menu #menuNavBoard="matMenu">
+      <button mat-menu-item color="primary">New Board</button>
+      <button mat-menu-item color="primary">Edit Board</button>
+      <button mat-menu-item color="primary">Delete Board</button>
+    </mat-menu>
+
+    <button class="topnav__button"mat-button [matMenuTriggerFor]="menuNavNote" color="primary">Note</button>
+
+    <mat-menu #menuNavNote="matMenu">
+      <button mat-menu-item>New Note</button>
+      <button mat-menu-item>Edit Note</button>
+      <button mat-menu-item>Delete Note</button>
+    </mat-menu>
+
   </div>
   <div class="topnav__section topnav__section--jc-center">
     <div class="zoom">
       <span class="zoom__label">zoom: </span>
       <div class="zoom__interactive">
-        <span class="zoom__buttom"><mat-icon class="zoom__icon" aria-hidden="false">zoom_in</mat-icon></span>
+        <button class="zoom__buttom" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon class="zoom__icon" aria-hidden="false">zoom_in</mat-icon>
+        </button>
         <span class="zoom__status">50%</span>
-        <span class="zoom__buttom"><mat-icon class="zoom__icon" aria-hidden="false">zoom_out</mat-icon></span>
+        <button class="zoom__buttom" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon class="zoom__icon" aria-hidden="false">zoom_out</mat-icon>
+        </button>
       </div>
     </div>
   </div>
   <div class="topnav__section topnav__section--jc-end">
     <div class="user">
       <div class="user__avatar"><img src="./assets/avatar.png" alt="" class="image"></div>
-      <span class="user__name"><a href="" class="topnav__button topnav__button--variant-2">Lorem Ipsum</a></span>
+      <button class="user__name topnav__button topnav__button--variant-2" mat-button color="primary">Lorem Ipsum</button>
     </div>
   </div>
 </div>

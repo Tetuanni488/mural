@@ -13,11 +13,16 @@
     width: 100%;
     box-shadow: 0 0 5px 5px #80808065;
 
+    &--dark-mode{
+        background-color: #222222;
+        color: #fff;
+    }
+
     &__section{
         display: flex;
         flex-direction: row;
         gap: 10px;
-        padding: 1em;
+        padding: .5em;
         width: 100%;
 
         &--jc-end{
@@ -28,30 +33,13 @@
         }
     }
     &__button{
-        min-width: 50px;
-        padding: .5em;
         font-size: 18px;
-        font-weight: bold;
         text-align: center;
-        color: #fff;
-        background-color: #ff1100;
-        border-radius: 2em;
         transition: all 0.3s;
-        cursor: pointer;
-
-        &:hover{
-            background-color: #e91000;
-        }
 
         &--variant-2{
-            color: #000;
-            background-color: transparent;
             text-decoration: none;
             font-size: 22px;
-        }
-        &--variant-2:hover{
-            background-color: transparent;
-            color: #808080;
         }
     }
 
@@ -60,13 +48,16 @@
         flex-direction: row;
         align-items: center;
         justify-content: end;
+        gap: .5em;
 
         &__name{
-            width: 200px;
+            width: fit-content;
         }
 
         &__avatar{
             width: auto;
+            display: flex;
+            align-items: center;
             .image{
                 width: 50px;
                 clip-path: circle(50%);
@@ -78,7 +69,7 @@
 .zoom{
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    align-items: center;
     gap: .5em;
     font-weight: bold;
     font-size: 20px;
@@ -91,5 +82,6 @@
     }
     &__icon{
         font-size: 25px;
+        align-self: center;
     }
 }
