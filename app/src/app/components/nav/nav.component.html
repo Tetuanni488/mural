@@ -1,0 +1,50 @@
+<div class="nav-container nav--dark-mode">
+    <div class="nav">
+      <div class="nav__section">
+      
+        <button class="nav__button" mat-button color="basic">List</button>
+    
+        <button class="nav__button" mat-button [matMenuTriggerFor]="menuNavBoard" color="basic">Board</button>
+        <mat-menu class="menu" #menuNavBoard="matMenu">
+          <button class="drop-menu__button" mat-menu-item>New Board</button>
+          <button class="drop-menu__button" mat-menu-item>Edit Board</button>
+          <button class="drop-menu__button" mat-menu-item>Delete Board</button>
+        </mat-menu>
+    
+        <button class="nav__button" mat-button [matMenuTriggerFor]="menuNavNote" color="basic">Note</button>
+        <mat-menu class="drop-menu" #menuNavNote="matMenu">
+          <button class="drop-menu__button" mat-menu-item>New Note</button>
+          <button class="drop-menu__button" mat-menu-item>Edit Note</button>
+          <button class="drop-menu__button" mat-menu-item>Delete Note</button>
+        </mat-menu>
+  
+        <a class="nav__button" mat-button color="basic" [routerLink]="['/about']">About</a>
+    
+      </div>
+      <div class="nav__section nav__section--jc-center">
+        <div class="zoom">
+          <span class="zoom__label">zoom: </span>
+          <div class="zoom__interactive">
+            <button class="zoom__buttom" mat-icon-button color="basic" aria-label="Example icon button with a home icon">
+              <mat-icon class="zoom__icon" aria-hidden="false">zoom_in</mat-icon>
+            </button>
+            <span class="zoom__status">50%</span>
+            <button class="zoom__buttom" mat-icon-button color="basic" aria-label="Example icon button with a home icon">
+              <mat-icon class="zoom__icon" aria-hidden="false">zoom_out</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="nav__section nav__section--jc-end">
+        <div class="user">
+          <div class="user__avatar"><img class="image" src="./assets/avatar.png" alt=""></div>
+          <button class="user__name nav__button nav__button--variant-2" mat-button [matMenuTriggerFor]="menuProfile" color="basic">Lorem Ipsum</button>
+          <mat-menu class="drop-menu" #menuProfile="matMenu">
+            <button class="drop-menu__button" mat-menu-item>Infromation</button>
+            <button class="drop-menu__button" mat-menu-item>Edit Profile</button>
+            <button class="drop-menu__button" mat-menu-item>Log out</button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>

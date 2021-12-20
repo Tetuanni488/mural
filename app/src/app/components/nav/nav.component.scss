@@ -1,0 +1,115 @@
+::root{
+    --primary-color:#c2185b;
+
+    --font-size-medium:18px;
+}
+
+//Top navbar
+
+.nav-container{
+    width: 100%;
+    box-shadow: 0 0 5px 5px #80808065;
+}
+.nav{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    margin: 0 auto;
+    font-weight: normal;
+    color: #ffff;
+
+    &--dark-mode{
+        background-color: #428394;
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+
+        &--jc-end{
+            justify-content: flex-end;
+        }
+        &--jc-center{
+            justify-content: center;
+        }
+    }
+    &__button{
+        font-weight: normal;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        transition: all 0.3s;
+
+        &--variant-2{
+            text-decoration: none;
+            font-size: 18px;
+        }
+    }
+
+    .user{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        justify-content: end;
+        gap: .5em;
+
+        &__name{
+            width: fit-content;
+        }
+
+        &__avatar{
+            width: auto;
+            display: flex;
+            align-items: center;
+            padding: 0.5em;
+            .image{
+                width: 3em;
+                clip-path: circle(50%);
+            }
+        }
+    }
+}
+
+//Drop menu
+
+::ng-deep .mat-menu-content{
+    background-color:#e0e0e0;
+}
+
+.drop-menu{
+    padding: unset;
+
+    &__button{
+        font-size: 15px;
+        font-weight: 500;
+        color: #505050;
+        background-color: #e0e0e0;
+    }
+}
+
+//Zoom container
+
+.zoom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+    font-size: 15px;
+
+    &__interactive{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+    &__icon{
+        font-size: 25px;
+        align-self: center;
+    }
+}
