@@ -8,3 +8,19 @@
     padding-top: 1em;
     
 }
+
+.content{
+    &--margin{
+        margin-top: 1em;
+    }
+}
+
+.content > .title{
+    font-weight: 500;
+    color: #9c9c9c;
+}
+.card{
+    color:#747474;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,.12);
+}
