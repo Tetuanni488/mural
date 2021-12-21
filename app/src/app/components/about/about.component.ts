@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router, ParamMap, } from '@angular/router';
 
 interface FoodNode {
   name: string;
@@ -12,10 +13,13 @@ interface FoodNode {
 })
 
 export class AboutComponent implements OnInit {
-  constructor() {
-  }
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
   }
 
+  public goTo(section: string){
+    this.router.navigate(['/about',section])
+
+  }
 }

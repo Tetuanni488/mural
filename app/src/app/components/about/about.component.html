@@ -1,9 +1,10 @@
 <div class="wrapper">
     <mat-list class="side-nav">
-        <a class="side-nav__item" role="listitem" mat-list-item routerlinkactive="docs-component-viewer-sidenav-item-selected">Noter</a>
-        <a class="side-nav__item" role="listitem" mat-list-item routerlinkactive="docs-component-viewer-sidenav-item-selected">Creator</a>
-        <a class="side-nav__item" role="listitem" mat-list-item routerlinkactive="docs-component-viewer-sidenav-item-selected">Tutorials</a>
-        <a class="side-nav__item" role="listitem" mat-list-item routerlinkactive="docs-component-viewer-sidenav-item-selected">Docs</a>      
+        <a class="side-nav__item" role="listitem" mat-list-item (click)="goTo('noter')">Noter</a>
+        <a class="side-nav__item" role="listitem" mat-list-item (click)="goTo('creators')">Creator</a>
+        <a class="side-nav__item" role="listitem" mat-list-item (click)="goTo('tutorials')">Tutorials</a>
+        <a class="side-nav__item" role="listitem" mat-list-item (click)="goTo('documentacion')" >Docs</a>      
     </mat-list>
+    <app-component-viwer class="content-viwer"></app-component-viwer>
 </div>
 
