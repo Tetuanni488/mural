@@ -15,6 +15,7 @@ import { CanvasBoardComponent } from './components/canvas-board/canvas-board.com
 import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ComponentViwerComponent } from './components/component-viwer/component-viwer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ComponentViwerComponent } from './components/component-viwer/component-
     CanvasBoardComponent,
     NavComponent,
     AboutComponent,
-    ComponentViwerComponent
+    ComponentViwerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

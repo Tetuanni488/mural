@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: inherit;
+    max-height: 46px;
+    padding: 1em;
+    background-color: #428394;
+    color: #fff;
+}
+
+.footer > .thumbnail{
+    .image{
+        width: 30px;
+    }
+}
