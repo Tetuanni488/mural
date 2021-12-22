@@ -16,6 +16,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ComponentViwerComponent } from './components/component-viwer/component-viwer.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NoterDetailsComponent } from './components/about/subcomponents/noter-details/noter-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavComponent,
     AboutComponent,
     ComponentViwerComponent,
-    FooterComponent
+    FooterComponent,
+    NoterDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,10 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important; 
+}
+
 .canvas-board{
-    background-color: violet;
+    overflow: hidden;
+    background-color: #afafaf;
 }

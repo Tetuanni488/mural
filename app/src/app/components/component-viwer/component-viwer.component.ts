@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
+
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-component-viwer',
@@ -6,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component-viwer.component.scss']
 })
 export class ComponentViwerComponent implements OnInit {
+  
+  public section: any;
+  public isNoter : boolean = false;
+  public isDeveloper : boolean = false;
+  public isTutorial: boolean = false;
+  public isDocs: boolean = false;
 
-  constructor() { }
-
+  constructor(private route: ActivatedRoute, private router: Router) {
+  }
+  
   ngOnInit(): void {
   }
 

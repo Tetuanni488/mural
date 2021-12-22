@@ -9,8 +9,8 @@ export class CanvasBoardComponent implements OnInit, AfterViewInit {
 
   @ViewChild('CanvasRef',{static:false}) CanvasRef:any;
 
-  public canvas_width = document.documentElement.clientWidth/2;
-  public canvas_height = document.documentElement.clientHeight/2;
+  public canvas_width = window.innerWidth;
+  public canvas_height = window.innerHeight;
 
   private cx!: CanvasRenderingContext2D;
 
@@ -58,11 +58,12 @@ export class CanvasBoardComponent implements OnInit, AfterViewInit {
     this.writeSingle(prev_pos);  
   };
 
-  private writeSingle (prev_pos: any,emit: boolean = true){
+  private writeSingle(prev_pos: any,emit: boolean = true){
     this.drawNote(prev_pos, {x: prev_pos.x+20, y: prev_pos.y+20})
   };
 
   private drawNote(prev_pos: any,current_pos: any){
+    this.cx.clearRect(0,0,this.canvas_width,this.canvas_height)
     if(!this.cx){
       return;
     }
